@@ -146,8 +146,20 @@ h1, h2, h3 { font-weight: 600; }
   font-size: 0.78rem;
   letter-spacing: 0.12em;
 }
-.lang-active { border-bottom: 1px solid var(--ink); }
-.lang-soon { opacity: 0.38; cursor: default; }
+.lang a {
+  padding: 0;
+  border-bottom: none;
+  opacity: 0.5;
+}
+.lang a:hover { opacity: 1; color: inherit; }
+.lang a.lang-active {
+  opacity: 1;
+  border-bottom: 1px solid var(--ink);
+}
+
+/* Chinese pages load Noto Serif TC/SC in their own <head> */
+html[lang="zh-Hant"] body { font-family: "Noto Serif TC", "Shippori Mincho B1", serif; }
+html[lang="zh-Hans"] body { font-family: "Noto Serif SC", "Shippori Mincho B1", serif; }
 
 @media (min-width: 900px) {
   .site-header { padding: 0.8rem 2.4rem; }
