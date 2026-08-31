@@ -481,7 +481,8 @@ html[lang="zh-Hans"] body { font-family: "Noto Serif SC", "Shippori Mincho B1", 
   position: relative;
   max-width: 400px;
 }
-.letter-portrait svg { width: 100%; height: auto; display: block; }
+.letter-portrait svg,
+.letter-portrait img { width: 100%; height: auto; display: block; }
 .letter-portrait .placeholder-caption {
   position: absolute;
   left: 0.6rem;
