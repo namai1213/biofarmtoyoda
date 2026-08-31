@@ -187,6 +187,18 @@ h1, h2, h3 { font-weight: 600; }
   inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+/* scrim so the cream headline stays readable over the bright photo */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to top, rgba(24, 32, 20, 0.62), rgba(24, 32, 20, 0.08) 55%, rgba(24, 32, 20, 0) 75%),
+    linear-gradient(100deg, rgba(24, 32, 20, 0.35), rgba(24, 32, 20, 0) 55%);
 }
 
 .hero-inner {
