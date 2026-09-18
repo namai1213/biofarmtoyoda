@@ -361,7 +361,7 @@ html[lang="zh-Hans"] body { font-family: "Noto Serif SC", "Shippori Mincho B1", 
   .product-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 1.6rem; }
 }
 @media (min-width: 980px) {
-  .product-grid { grid-template-columns: repeat(4, 1fr); gap: 1.8rem; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 2.6rem; max-width: 880px; margin: 0 auto; }
 }
 
 .product-art {
@@ -405,6 +405,94 @@ html[lang="zh-Hans"] body { font-family: "Noto Serif SC", "Shippori Mincho B1", 
   color: var(--ink-soft);
 }
 
+/* ---- Ordering info (below product grid) ---- */
+
+.order-info {
+  max-width: 880px;
+  margin: 3rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ink);
+  font-size: 0.92rem;
+  line-height: 1.9;
+}
+
+.order-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.order-row {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.order-row:first-child { padding-top: 0; }
+
+.order-row dt {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--ink-soft);
+  margin-bottom: 0.2rem;
+}
+.order-row dt::before {
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 0.45em;
+  margin-right: 0.6em;
+  vertical-align: 0.1em;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+.order-row dd { margin: 0; }
+
+.order-notes {
+  margin-top: 2rem;
+  padding: 1.4rem 1.3rem;
+  background: var(--cream-deep);
+}
+
+.order-notes-title {
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--ink-soft);
+  padding-bottom: 0.55rem;
+  margin-bottom: 0.7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.order-notes-list {
+  list-style: none;
+  font-size: 0.88rem;
+  line-height: 1.85;
+}
+.order-notes-list li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.order-notes-list li + li { margin-top: 0.55rem; }
+
+.order-note-num {
+  flex: 0 0 auto;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+@media (min-width: 720px) {
+  .order-info { margin-top: 3.4rem; padding-top: 2.4rem; }
+  .order-row {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: 1.6rem;
+    align-items: baseline;
+    padding: 1rem 0;
+  }
+  .order-row dt { margin-bottom: 0; }
+  .order-notes { margin-top: 2.6rem; padding: 1.8rem 2rem; }
+}
+
 /* ============ STORY (single text block) ============ */
 
 .story {
@@ -425,6 +513,8 @@ html[lang="zh-Hans"] body { font-family: "Noto Serif SC", "Shippori Mincho B1", 
   font-size: 0.95rem;
   text-align: left;
 }
+
+.story-title-second { margin-top: 3.2rem; }
 
 /* ============ METHOD ============ */
 
