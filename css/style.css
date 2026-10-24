@@ -516,6 +516,24 @@ html[lang="zh-Hans"] body { font-family: "Noto Serif SC", "Shippori Mincho B1", 
 
 .story-title-second { margin-top: 3.2rem; }
 
+.story-link { margin-top: 1.8rem; }
+
+.story-link a {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.story-link a:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+
 /* ============ METHOD ============ */
 
 .method {
